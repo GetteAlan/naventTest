@@ -1,1 +1,19 @@
-<p>postings works!</p>
+<div >
+    <mat-list>
+        <mat-list-item *ngFor="let post of postings">
+            <mat-card>
+                <div style="display: inline-block;">
+                    <img width="200px" src="{{post.posting_picture}}" alt={{post.posting_id}}>
+                    <h4>{{getPrice(post)}}</h4>
+                    <h6 *ngIf="hasExpenses(post)">{{getExpenses(post)}}</h6>
+                </div>
+                <div style="display: inline-block;">
+                    
+                </div>
+
+
+            </mat-card>
+        </mat-list-item>
+    </mat-list>
+</div>
+

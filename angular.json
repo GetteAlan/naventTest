@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "naventTest"
+    }
+  },
+  "defaultProject": "naventTest",
+  "cli": {
+    "analytics": false
+  }
 }
