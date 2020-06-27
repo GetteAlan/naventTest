@@ -1,0 +1,75 @@
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  
+.example-radio-button {
+  margin: 5px;
+}
+
+.example-form-field {
+  width: 200px;
+}
+
+.container {
+  padding:20px;
+  display: inline-flex;
+} 
+
+.text-filter {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.text-option-radio {
+  font-size: 12px;
+}
+
+.line-separator {
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+
+
+.container-address {
+  display: inline-flex;
+  align-items: center;
+
+  .input-text {
+    padding: 8px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .button{
+    margin-left: 5px;
+    height: 33px;
+    width: 33px;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background-color:#ffffff;
+    border-radius:6px;
+    border:1px solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color:#666666;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+  
+    .icon-search {
+      color: #3489eb;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      font-size: 16px;
+    }
+  }
+}
+
+
+

@@ -1,19 +1,46 @@
-<div >
-    <mat-list>
-        <mat-list-item *ngFor="let post of postings">
-            <mat-card>
-                <div style="display: inline-block;">
-                    <img width="200px" src="{{post.posting_picture}}" alt={{post.posting_id}}>
-                    <h4>{{getPrice(post)}}</h4>
-                    <h6 *ngIf="hasExpenses(post)">{{getExpenses(post)}}</h6>
-                </div>
-                <div style="display: inline-block;">
-                    
-                </div>
+<div class="container">
+    <ul class="list-postings">
+        <li class="list-item" *ngFor="let post of postings">
+            <mat-card class="item">
+                <span class="state-banner" [ngStyle]="{'background-color': getStateColor(post)}"></span>
+                <div style="display: inline-flex;">
+                    <div class="container-content">
+                        <div class="container-img">
+                            <div class="container-favorite">
+                                <p class="text-status">{{getStatusDetail(post)}}</p>
+                                <a class="button-favorite" (click)="setToFavorite(post)">
+                                    <mat-icon class="icon-favorite" [ngStyle]="{'color':getStyleFavorite(post)}">{{getIconFavorite(post)}}</mat-icon>
+                                </a>
+                            </div>
 
-
+                            <img width="200px" src="{{post.posting_picture}}" alt={{post.id}}>
+                            
+                        </div>
+                        <div class="container-prices">
+                            <p class="text-price">{{ formatCurrency(post.posting_prices[0].price.amount) }}</p>
+                            <p class="text-expenses" *ngIf="hasExpenses(post)">+{{formatCurrency(post.posting_prices[0].expenses.amount)}} Expensas</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="container-detail" >
+                            <p class="title-post">{{post.title}}</p>
+                            <p class="subtitle-post">{{post.posting_location.city}}, {{post.posting_location.address}}</p>
+                            <p class="description-post">{{post.posting_description}}</p>
+                        </div>
+                        <div class="container-footer">
+        
+                            <div class="container-since-publish">
+                                <mat-icon>restore</mat-icon>
+                                <p class="text-since-publish">Publicado hace {{getSincePublishDate(post.publish_date)}} días</p>
+                            </div>
+                            <button class="button" (click)="openLoginForm()">Contactar</button>
+                        </div>
+                    </div>
+                </div>          
             </mat-card>
-        </mat-list-item>
-    </mat-list>
+        </li>
+    </ul>
 </div>
+
+
 

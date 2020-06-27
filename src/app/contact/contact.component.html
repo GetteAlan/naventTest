@@ -1,0 +1,23 @@
+
+<mat-toolbar class="container-toolbar" color="primary">
+    Contactarse
+    <button mat-button mat-dialog-close>&times;</button>
+</mat-toolbar>
+<form class="container-form" novalidate [formGroup]="form" (ngSubmit)="submit()">
+
+    <p class="text-filter">Nombre</p>
+    <input class="input-text" type="text" formControlName="name" required>
+
+    <p class="text-filter">Teléfono</p>
+    <input class="input-text" type="tel" formControlName="phone" required>
+
+    <p class="text-filter">Email</p>
+    <input class="input-text" type="email" formControlName="email" required>
+
+    <div class="container-button">
+        <button class="button" type="submit">Contactar</button>
+    </div>
+</form>
+
+
+

@@ -4,9 +4,8 @@ import { OperationType } from './operationType';
 import { PostingPrices } from './postingPrices';
 import { PostingStatus } from './postingStatus';
 
-export class Posting{
-  
-        posting_id: string;
+export class Posting {
+        id: string;
         posting_location: PostingLocation;
         posting_prices: PostingPrices[];
         operation_type: OperationType;
@@ -17,5 +16,5 @@ export class Posting{
         posting_picture:string;
         posting_slug:string;
         posting_description:string;
-  
+        favorite:boolean;
 }

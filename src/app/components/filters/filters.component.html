@@ -1,4 +1,25 @@
-<div >
+<div class="container" >
+  <mat-card>
     <h3>Filtrado actual</h3>
-    <span class="flex-spacer"></span>
+    <hr class="line-separator">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+      <p class="text-filter">Dirección</p>
+      <div class="container-address">
+        <input class="input-text" type="text" placeholder="Buscar por dirección" formControlName="address">
+        <button class="button" (click)="getByAddress()">
+          <mat-icon class="icon-search">search</mat-icon>
+        </button>
+      </div>
+
+      <hr class="line-separator">
+      <p class="text-filter">Tipo de Operación</p>
+      <div class="form-group">
+          <div *ngFor="let operation of operationsTypes">
+            <input type="radio" value="{{operation.operation_type_id}}" name="operation_type_id" formControlName="operation_type_id">
+            <label class="text-option-radio" for="{{operation.operation_type_name}}">{{operation.operation_type_name}}</label>
+         </div>
+      </div>
+    </form>
+  </mat-card>
 </div>

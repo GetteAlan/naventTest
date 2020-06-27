@@ -1,0 +1,155 @@
+.container {
+    padding:20px;
+    display: inline-flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container-content {
+    
+    .container-prices {
+        height: 44px;
+        padding: 10px;
+    
+        .text-price {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .text-expenses {
+            font-size: 12px;
+            margin: 0;
+        }
+    }
+}
+
+
+
+.list-postings {
+    margin: 0;
+    padding: 0;
+
+    .list-item {
+        list-style:none;
+        margin-bottom: 10px;
+    }
+}
+
+.item {
+    padding: 0;
+    
+    .state-banner {
+        height: 5px;
+        width: 100%;
+        display: block;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        color:green
+    }
+    
+}
+
+
+
+.title-post {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3489eb;
+    margin: 0;
+}
+
+.subtitle-post {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+}
+
+.description-post {
+    font-size: 12px;
+    color: #363636;
+}
+
+.container-detail {
+    padding: 10px;
+    height: 61%;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.button {
+    color:white;
+    font-weight: bold;
+    font-size: 14px;
+    background-color:#e0751d;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+}
+
+.text-since-publish {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 0 0 5px;
+}
+
+.container-since-publish {
+    display: inline-flex;
+    align-items: center;
+}
+
+.text-status {
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    text-shadow: 2px 2px 2px black;
+}
+
+.container-img {
+    position: relative;
+}
+
+.container-favorite {
+    position: absolute;
+    width: 95%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 5px;
+    align-items: center;
+}
+
+.button-favorite {
+    padding: 0;
+    height: 32px;
+    width: 32px;
+    box-shadow:2px 2px 10px 0px black;
+    background-color:#ffffff;
+    border-radius:50%;
+    cursor:pointer;
+    color:#666666;
+    text-decoration:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon-favorite {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        font-size: 16px;
+    }
+}
+.button-favorite:hover {
+    .icon-favorite {
+        color:red;
+    }
+}
