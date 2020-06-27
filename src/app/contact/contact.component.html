@@ -6,16 +6,26 @@
 <form class="container-form" novalidate [formGroup]="form" (ngSubmit)="submit()">
 
     <p class="text-filter">Nombre</p>
-    <input class="input-text" type="text" formControlName="name" required>
+    <div class="container-input">
+        <input class="input-text" type="text" formControlName="name" required>
+        <mat-error *ngIf="form.get('name').invalid">*</mat-error>
+    </div>
 
     <p class="text-filter">Teléfono</p>
-    <input class="input-text" type="tel" formControlName="phone" required>
+    <div class="container-input">
+        <input class="input-text" type="tel" formControlName="phone" required>
+        <mat-error *ngIf="form.get('phone').invalid">*</mat-error>
+    </div>
 
     <p class="text-filter">Email</p>
-    <input class="input-text" type="email" formControlName="email" required>
+    <div class="container-input">
+        <input class="input-text" type="email" formControlName="email" required>
+        <mat-error *ngIf="form.get('email').invalid">*</mat-error>
+    </div>
+
 
     <div class="container-button">
-        <button class="button" type="submit">Contactar</button>
+        <button class="button" type="submit" [disabled]="form.invalid">Contactar</button>
     </div>
 </form>
 
